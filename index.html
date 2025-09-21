@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🧮 Calculator</h1>
+            <div class="header-controls">
+                <button class="history-btn" id="historyToggle">📚</button>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+        </div>
+
+        <div class="display">
+            <div class="calculation" id="calculation"></div>
+            <div class="result" id="result">0</div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="scientificToggle">Scientific</button>
+            <button class="control-btn clear" id="clearAll">AC</button>
+            <button class="control-btn" id="backspace">⌫</button>
+        </div>
+
+        <div class="scientific-buttons" id="scientificButtons">
+            <button class="btn operator" data-function="sin">sin</button>
+            <button class="btn operator" data-function="cos">cos</button>
+            <button class="btn operator" data-function="tan">tan</button>
+            <button class="btn operator" data-function="log">log</button>
+            <button class="btn operator" data-function="ln">ln</button>
+            <button class="btn operator" data-function="sqrt">√</button>
+            <button class="btn operator" data-function="pow">x²</button>
+            <button class="btn operator" data-function="factorial">x!</button>
+            <button class="btn operator" data-operation="^">x^y</button>
+            <button class="btn operator" data-value="3.14159">π</button>
+            <button class="btn operator" data-value="2.71828">e</button>
+            <button class="btn operator" data-operation="%">%</button>
+        </div>
+
+        <div class="buttons">
+            <button class="btn clear" data-action="clear">C</button>
+            <button class="btn operator" data-operation="+/-">±</button>
+            <button class="btn operator" data-operation="%">%</button>
+            <button class="btn operator" data-operation="/">÷</button>
+
+            <button class="btn" data-number="7">7</button>
+            <button class="btn" data-number="8">8</button>
+            <button class="btn" data-number="9">9</button>
+            <button class="btn operator" data-operation="*">×</button>
+
+            <button class="btn" data-number="4">4</button>
+            <button class="btn" data-number="5">5</button>
+            <button class="btn" data-number="6">6</button>
+            <button class="btn operator" data-operation="-">-</button>
+
+            <button class="btn" data-number="1">1</button>
+            <button class="btn" data-number="2">2</button>
+            <button class="btn" data-number="3">3</button>
+            <button class="btn operator" data-operation="+">+</button>
+
+            <button class="btn zero" data-number="0">0</button>
+            <button class="btn" data-action="decimal">.</button>
+            <button class="btn equals" data-action="equals">=</button>
+        </div>
+    </div>
+
+    <!-- History Panel -->
+    <div class="history-panel" id="historyPanel">
+        <div class="history-header">
+            <h2 class="history-title">History</h2>
+            <button class="close-history" id="closeHistory">✕</button>
+        </div>
+        <div class="history-content" id="historyContent">
+            <div class="empty-history">
+                <div class="empty-history-icon">🧮</div>
+                <p>No calculations yet</p>
+                <p style="font-size: 0.9rem; margin-top: 5px;">Your calculation history will appear here</p>
+            </div>
+        </div>
+        <button class="clear-history" id="clearHistory">🗑️ Clear History</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
